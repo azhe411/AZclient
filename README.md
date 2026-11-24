@@ -1,6 +1,20 @@
-# AZclient Offline OSS
+# AZclient — Minecraft 热注入反作弊测试客户端
 
-AZclient 8.0.0 Offline OSS 是原项目的离线、可审计版本。启动、进程检测、注入、游戏内配置和本地日志不需要账号、邀请码、订阅服务或外部网络。
+AZclient 是面向 Minecraft 服主、反作弊开发者和客户端兼容性研究者的 Windows 测试工具。它通过 Java Attach API 在游戏已经运行时将 Agent 动态加载进 Minecraft JVM，无需修改游戏文件，也不要求把客户端预装成 Forge/Fabric 模组。
+
+项目用于在自建服务器或获得明确授权的环境中复现并观察移动、方块交互、战斗时序、实体渲染以及不同游戏版本之间的行为差异，帮助定位反作弊误报、协议兼容和客户端表现问题。游戏内提供可视化面板、状态组件和一组可独立配置的测试模块。
+
+当前仓库是 **8.0.0 Offline OSS**：启动、进程检测、热注入、游戏内配置和本地日志均不需要 AZclient 账号、邀请码、订阅服务或外部网络。
+
+## 它如何工作
+
+1. 注入器在本机查找正在运行的 Minecraft Java 进程；
+2. 用户明确选择目标进程并执行注入；
+3. 注入器通过 Java Attach API 加载 `lite-agent.jar`；
+4. Agent 在目标 JVM 内安装兼容性 Hook，游戏内按右 Shift 打开测试面板；
+5. 日志、配置与诊断信息保存在本机。
+
+它不是服务端插件，也不是独立 Minecraft 客户端；仓库不包含 Minecraft、Forge、Fabric、Mojang 映射或游戏资产。
 
 ## 与原商业版本的区别
 
