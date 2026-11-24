@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Agent-Class: com.lite.agent.LiteAgent
+Premain-Class: com.lite.agent.LiteAgent
+Can-Redefine-Classes: true
+Can-Retransform-Classes: true
+

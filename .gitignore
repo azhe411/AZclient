@@ -1,0 +1,16 @@
+﻿build/
+versions/
+toolchain/
+lib/*.jar
+!lib/asm.jar
+*.exe
+tools/vendor/
+build-oss/
+release/
+*.zip
+*.exe
+*.class
+*.log
+.idea/
+.vscode/
+/tests/
